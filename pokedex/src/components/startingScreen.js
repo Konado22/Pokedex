@@ -5,7 +5,8 @@ export const starting = () => {
     <form>
         <input className="thisUser" type="input" placeholder="username"></input>
         <input className="thisPassword" type="password" placeholder="password"></input>
-        <button className="login"></button>
+{/* on click handler for authentication, passwords not encrypted */}
+        <button className="login" onClick={}></button>
     </form>
 
     </div>
