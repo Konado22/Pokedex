@@ -21,7 +21,7 @@ const Login = (username, password) => {
               Password<input type={"password"} placeholder="password"></input>
             </label>
             <Button type="submit" onClick={(e) => {e.preventDefault()}}>Submit</Button>
-            <Button type="" onClick={() => {
+            <Button type="button" onClick={() => {
                
             }}>Signup</Button>
           </Form>
