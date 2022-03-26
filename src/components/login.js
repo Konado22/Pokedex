@@ -14,15 +14,11 @@ const Login = (username, password) => {
         <Card.Title>Login to access this website</Card.Title>
         <Card.Body style={{"display": "flex", }}>
           <Form style={{"display" : "flex", "flexDirection": "column", "justifyContent": "center"}}>
-            <label>
               Username<input type={"text"} placeholder="username"></input>
-            </label>
-            <label>
-              Password<input type={"password"} placeholder="password"></input>
-            </label>
-            <Button type="submit" onClick={(e) => {e.preventDefault()}}>Submit</Button>
-            <Button type="button" onClick={() => {
-               
+              Password<input type={"password"} placeholder="password" style={{"marginBottom": "15px"}}></input>
+            <Button type="submit" style={{"marginBottom": "15px"}} onClick={(e) => {e.preventDefault()}}>Submit</Button>
+            <Button type="button" onClick={(e) => {
+               e.preventDefault();
             }}>Signup</Button>
           </Form>
         </Card.Body>

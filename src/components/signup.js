@@ -13,16 +13,10 @@ const SignUp = () => {
             justifyContent: "center",
           }}
         >
-          <label>
             Username<input type={"text"} placeholder='Username'></input>
-          </label>
-          <label>
             Password<input type={"password"} placeholder='password'></input>
-          </label>
-          <label>
-            Password<input type={"password"} placeholder='confirm password'></input>
-          </label>
-          <button>Submit</button>
+            Password<input type={"password"} placeholder='confirm password' style={{"marginBottom": "15px"}}></input>
+          <button style={{"marginBottom": "15px"}}>Submit</button>
           <button>Login</button>
         </Form>
       </Card>
