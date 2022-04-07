@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <>
         <div style={{"display":"flex", "justifyContent" : "center", "flexDirection": "column"}}>
-            <img src={pokeHeader} ></img>
+            {/* <img src={pokeHeader} ></img> */}
             {/* needs media querries or formatting from container in react-bootstrap */}
             {/* <img src={pokeBall}></img> */}
             <img></img>
