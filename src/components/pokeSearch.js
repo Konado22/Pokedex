@@ -3,18 +3,26 @@ import { Form } from "react-bootstrap"
 import axios from "axios"
 const PokeSearch = () => { 
     const [pokeArray, setPokeArray] =useState([])
-    // const Querry = document.getElementById('searchbar')
-    // const results = Querry.innerHTML
-    // const pokeFetch = fetch( `"https://pokeapi.co/api/v2/ability/${results}/"`)
-    // `"https://pokeapi.co/api/v2/${results}"`
+    const Querry = document.getElementById('searchbar')
+    const results = Querry.innerHTML
+    const pokeFetch = await fetch( `"https://pokeapi.co/api/v2/ability/${results}/"`)
+    if (pokeFetch.ok) {
+        const data = pokeFetch.json()
+        setPokeArray({data})
+    } else {
+        alert("error in search")
+    }
+
+
+    
     // const [pokeURL, newPokeURL] = useState(`'https://pokeapi.co/api/v2/pokemon/${results}/?limit=30&offset=30'`)
-    axios.get("https://pokeapi.co/api/v2/pokemon").then((res) => {
-        pokeArray.push(res).then( (data) => {
-            pokeArray.map(
+    // axios.get("https://pokeapi.co/api/v2/pokemon").then((res) => {
+    //     pokeArray.push(res).then( (data) => {
+    //         pokeArray.map(
                 
-            )
-        })
-    })
+    //         )
+    //     })
+    // })
     return (
         <Form>
             <Form.Group>
@@ -26,5 +34,5 @@ const PokeSearch = () => {
             </Form.Group>  
         </Form>
     )
-}
+    }
 export default PokeSearch;
