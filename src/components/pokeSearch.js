@@ -2,16 +2,23 @@ import { useState, useEffect } from "react"
 import { Form } from "react-bootstrap"
 import axios from "axios"
 const PokeSearch = () => { 
-    const [pokeArray, setPokeArray] =useState([])
-    const Querry = document.getElementById('searchbar')
-    const results = Querry.innerHTML
-    const pokeFetch = await fetch( `"https://pokeapi.co/api/v2/ability/${results}/"`)
-    if (pokeFetch.ok) {
-        const data = pokeFetch.json()
-        setPokeArray({data})
-    } else {
-        alert("error in search")
-    }
+    const arr = []
+    const searchText = document.getElementById('searchbar')
+    const results = searchText.innerHTML;
+    const searchPoke = fetch(`"https://pokeapi.co/api/v2/ability/${results}/"`)
+  .then(response => response.json())
+  .then(data => arr.push(data));
+
+    // const [pokeArray, setPokeArray] =useState([])
+    // const Querry = document.getElementById('searchbar')
+    // const results = Querry.innerHTML
+    // const pokeFetch = await fetch( `"https://pokeapi.co/api/v2/ability/${results}/"`)
+    // if (pokeFetch.ok) {
+    //     const data = pokeFetch.json()
+    //     setPokeArray({data})
+    // } else {
+    //     alert("error in search")
+    // }
 
 
     
