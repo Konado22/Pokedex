@@ -6,7 +6,8 @@ import Login from './components/login';
 import Updates from './components/updates';
 import SignUp from './components/signup';
 import PokeSearch from './components/pokeSearch';
-
+import {useState} from 'react'
+import axios from 'axios';
 function App() {
   return (
    <>
