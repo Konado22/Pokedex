@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 export default function PokeSearch () {
 const [arr, setArr] = useState([])
 useEffect(() => {})
-// change this to the useState
+// change this to the useState rather then push to static array
 let array = []
 function Search () {fetch(`"https://pokeapi.co/api/v2/ability/${pokeName}"`).then( (data) =>{data.json()}).then((res) => {
     array.push(res)
