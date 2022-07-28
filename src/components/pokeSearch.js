@@ -4,7 +4,7 @@ const [arr, setArr] = useState([])
 useEffect(() => {})
 // change this to the useState
 let array = []
-function Search () {fetch(" https://pokeapi.co/api/v2/pokemon/").then( (data) =>{data.json()}).then((res) => {
+function Search () {fetch(`"https://pokeapi.co/api/v2/ability/${pokeName}"`).then( (data) =>{data.json()}).then((res) => {
     array.push(res)
     console.log(array)
     array.map((pokemon) => {
@@ -20,6 +20,7 @@ function Search () {fetch(" https://pokeapi.co/api/v2/pokemon/").then( (data) =>
 return(
     <>
     <h1>Click to search pokemon</h1>
+    <input type={search}></input>
     <button onClick={()=>{Search()}}>Search</button>
     </>
 )
