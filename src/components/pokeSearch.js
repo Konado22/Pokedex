@@ -4,7 +4,9 @@ const [arr, setArr] = useState([])
 useEffect(() => {})
 // change this to the useState rather then push to static array
 let array = []
-function Search () {fetch(`"https://pokeapi.co/api/v2/ability/${pokeName}"`).then( (data) =>{data.json()}).then((res) => {
+const pokeParams = document.getElementById("search")
+
+function Search () {fetch(`"https://pokeapi.co/api/v2/ability/${pokeParams}"`).then( (data) =>{data.json()}).then((res) => {
     array.push(res)
     console.log(array)
     array.map((pokemon) => {
