@@ -22,7 +22,7 @@ function Search () {fetch(`"https://pokeapi.co/api/v2/ability/${pokeParams}"`).t
 return(
     <>
     <h1>Click to search pokemon</h1>
-    <input type={search}></input>
+    <input type="search" id='search'></input>
     <button onClick={()=>{Search()}}>Search</button>
     </>
 )
